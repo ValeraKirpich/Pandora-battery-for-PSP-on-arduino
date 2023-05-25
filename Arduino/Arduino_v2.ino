@@ -23,7 +23,7 @@ SoftwareSerial pspSerial(2, 3); // RX, TX
 //AES aes;
 
 #define pin_butOk 7
-#define pin_debugLed 8 // new 11
+#define pin_debugLed 11 // old 8
 
 byte serial_code[8] = {0};
 byte msg[24] = {0};

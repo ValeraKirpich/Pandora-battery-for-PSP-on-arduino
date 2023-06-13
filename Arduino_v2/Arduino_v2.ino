@@ -38,29 +38,44 @@ byte tempBuffer[24] = {0};
 unsigned long ledTime = 0;
 bool ledOn = 0;
 
-void debugLed(const uint8_t count, const uint8_t speed)
+void testLed()
 {
-  for (int i=0; i<count; i++)
+  // Low Power
+  if (analogRead(pin_power) < 1020)
+  {
+    debugSerial.println(F("P"));
+    if(millis() - ledTime > 250) 
+    {
+      ledTime = millis();
+      ledOn = !ledOn;
+
+      if(ledOn)
+        PORTB |= pin_debugLed;
+      else
+        PORTB &= ~pin_debugLed;
+    }  
+  }
+  // Service mode
+  else if (serial_code[3] == 0xFF)
+  {
+    debugSerial.println(F("S"));
+    if(millis() - ledTime > 1000)
+    {
+      ledTime = millis();
+      ledOn = !ledOn;
+
+      if(ledOn)
+        PORTB |= pin_debugLed;
+      else
+        PORTB &= ~pin_debugLed;
+    }
+  }
+  // Normal
+  else
   {
     PORTB &= ~pin_debugLed;
-    delay(speed);
-    PORTB |= pin_debugLed;
-    delay(speed);
+    debugSerial.println(F("N"));
   }
-}
-
-void testVolt()
-{
-  if (analogRead(pin_power) < 1020 && millis() - ledTime > 300)
-  {
-    ledTime = millis();
-    ledOn = !ledOn;
-
-    if(ledOn)
-      PORTB |= pin_debugLed;
-    else
-      PORTB &= ~pin_debugLed;
-  }  
 }
 
 void setup()
@@ -90,7 +105,7 @@ void setup()
     serial_code[6] = 0xFF;
     serial_code[7] = 0x52;
 
-    debugLed(3, 250);
+    //debugLed(3, 250);
     debugSerial.println(F("Start service"));
   }
   else
@@ -105,7 +120,7 @@ void setup()
     serial_code[6] = 0x00;
     serial_code[7] = 0x4E;
 
-    debugLed(1, 1000);
+    //debugLed(1, 1000);
     debugSerial.println(F("Start normal"));
   }
 }
@@ -453,5 +468,5 @@ void loop()
       tempBuffer[i] = 0x00;
 
   //free(msg);
-  testVolt();
+  testLed();
 }

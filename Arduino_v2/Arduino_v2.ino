@@ -4,7 +4,6 @@
 #include "keys.h"
 #include <string.h>
 #include <AES.h>
-//#include "XTEA-Cipher.h"
 
 #if SerialParity
 #include <SoftwareSerialParity.h>
@@ -22,8 +21,8 @@ SoftwareSerial pspSerial(2, 3); // RX, TX
 
 //AES aes;
 
-#define pin_butOk 7
-#define pin_debugLed 11
+#define pin_butOk (1<<7)// PD7 - 7
+#define pin_debugLed (1<<3) // PB3 - 11
 #define pin_power A1
 
 byte serial_code[8] = {0};
@@ -43,9 +42,9 @@ void debugLed(const uint8_t count, const uint8_t speed)
 {
   for (int i=0; i<count; i++)
   {
-    digitalWrite(pin_debugLed, 0);
+    PORTB &= ~pin_debugLed;
     delay(speed);
-    digitalWrite(pin_debugLed, 1);
+    PORTB |= pin_debugLed;
     delay(speed);
   }
 }
@@ -56,7 +55,11 @@ void testVolt()
   {
     ledTime = millis();
     ledOn = !ledOn;
-    digitalWrite(pin_debugLed, ledOn);
+
+    if(ledOn)
+      PORTB |= pin_debugLed;
+    else
+      PORTB &= ~pin_debugLed;
   }  
 }
 
@@ -70,16 +73,13 @@ void setup()
 
   analogReference(INTERNAL);
 
-  //xtea.begin(XTEA_ROUNDS, XTEA_MAC_ROUNDS); //?
-
   debugSerial.begin(115200);
 
-  pinMode(pin_butOk, INPUT);
-  pinMode(pin_debugLed, OUTPUT);
+  DDRD &= ~(pin_butOk);
+  DDRB |= (pin_debugLed);
+  PORTB |= pin_debugLed;
 
-  digitalWrite(pin_debugLed, HIGH);
-
-  if (digitalRead(pin_butOk))
+  if (PIND & pin_butOk)
   {
     serial_code[0] = 0xA5;
     serial_code[1] = 0x06;
@@ -91,7 +91,7 @@ void setup()
     serial_code[7] = 0x52;
 
     debugLed(3, 250);
-    debugSerial.println("Start service");
+    debugSerial.println(F("Start service"));
   }
   else
   {
@@ -106,17 +106,17 @@ void setup()
     serial_code[7] = 0x4E;
 
     debugLed(1, 1000);
-    debugSerial.println("Start normal");
+    debugSerial.println(F("Start normal"));
   }
 }
 
 void log_byte(byte b)
 {
   if (b < 0x10)
-    debugSerial.print("0");
+    debugSerial.print(F("0"));
 
   debugSerial.print(b, HEX);
-  debugSerial.print(" ");
+  debugSerial.print(F(" "));
 
   //debugSerial.printf("%#02X ", b);
 }
@@ -131,7 +131,7 @@ void psp_write(byte *b, int len)
 #endif
 
   // log
-  debugSerial.print("Arduino: ");
+  debugSerial.print(F("Arduino: "));
   for (size_t i = 0; i < len; i++)
     log_byte(b[i]);
   debugSerial.println();
@@ -193,18 +193,6 @@ void MixChallenge2(byte *data, byte version, byte *challenge)
   data[0xF] = secret2[7];
 }
 
-/*
-void MatrixSwap(byte *data, byte *key, uint8_t keyLen)
-{
-  byte newmap[16] = {0};
-
-  memcpy_P(newmap, newmap, 16);
-
-  for (int i = 0; i < keyLen; i++)
-    data[i] = key[newmap[i]];
-}
-*/
-
 void MatrixSwap(byte* data, int length)
 {
   byte temp[length] = {0};
@@ -240,7 +228,7 @@ void generateSysconResponses()
 
   if (tempKey[0] == 0)
   {
-    debugSerial.println("Key not found");
+    debugSerial.println(F("Key not found"));
 
     for (int i = 3; i < 19; i++)
       tempBuffer[i] = 0xFF;
@@ -257,22 +245,12 @@ void generateSysconResponses()
   MixChallenge1(data, version, req);
   MatrixSwap(data, 16);
 
-/*
-  memcpy(challenge1a, data, 16);
-  xtea.ecbEncrypt(tempKey, challenge1a, 16);
-*/
-
   AES aesEncryptor1;
   aesEncryptor1.set_key(tempKey, 16);
   aesEncryptor1.encrypt(data, challenge1a);
 
   byte second[16];
   memcpy(second, challenge1a, 16);
-
-/*
-  memcpy(challenge1b, second, 16);
-  xtea.ecbEncrypt(tempKey, challenge1b, 16);
-*/
 
   AES aesEncryptor2;
   aesEncryptor2.set_key(tempKey, 16);
@@ -290,7 +268,7 @@ void loop()
   {
     pspdata[0] = pspSerial.read();
 
-    debugSerial.print("PSP:     ");
+    debugSerial.print(F("PSP:     "));
     log_byte(pspdata[0]);
 
     if (pspdata[0] == 0x5A)
@@ -317,10 +295,10 @@ void loop()
         for (int i = 0; i < msgLength; i++)
           msg[i] = pspSerial.read();
 
-        debugSerial.print("( ");
+        debugSerial.print(F("( "));
         for (int i = 0; i < msgLength; i++)
           log_byte(msg[i]);
-        debugSerial.print(") ");
+        debugSerial.print(F(") "));
       }
 
       pspdata[3] = pspSerial.read();
@@ -461,7 +439,7 @@ void loop()
 
       default:
       {
-        debugSerial.print("No option selected ");
+        debugSerial.print(F("No option selected "));
         log_byte(pspdata[2]);
         debugSerial.println();
       }

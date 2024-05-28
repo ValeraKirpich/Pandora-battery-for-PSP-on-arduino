@@ -6,7 +6,7 @@ RU
 
 Левый переключатель отвечает за включение аккумулятор. Второй за переключение режима (обычный/сервисный). Кнопка нужна для перезагрузки микроконтроллера. При включении или перезагрузке на кнопку пандора проинформирует о типе выбранного режима в зависимости от положения переключателя. Если светодиод мигает с периодами раз в секунду, то включен сервисный режим, если горит не прерывно, то работает обычный режим. При низком уровне заряда светодиод начнёт быстро мигать.
 
-ПОДДЕРЖИВАЮТСЯ ВСЕ МОДЕЛИ!
+ПОДДЕРЖИВАЮТСЯ ВСЕ МОДЕЛИ 1000-3000! Поддержка go и street планируется скоро. 
 
 Все ключи и прошивка были обновлены на основе этого проекта https://github.com/khubik2/pysweeper. Там же можно следить за обновлениями, которые будут появляться и в этом проекте.
 
@@ -40,7 +40,7 @@ Pandora service battery emulator written for Arduino. Atmega 168/328 is suitable
 
 The left switch is responsible for turning on the battery. The second is for switching mode (normal/service). The button is needed to reboot the microcontroller. When you turn on or reboot the button, Pandora will inform you about the type of mode selected depending on the position of the switch. If the LED flashes once per second, then the service mode is on; if it lights up continuously, then the normal mode is operating. When the battery level is low, the LED will flash quickly.
 
-ALL MODELS SUPPORTED!
+ALL MODELS SUPPORTED 1000-3000! Go and street support is planned soon.
 
 All keys and firmware have been updated based on this project https://github.com/khubik2/pysweeper. There you can also follow the updates that will appear in this project.
 

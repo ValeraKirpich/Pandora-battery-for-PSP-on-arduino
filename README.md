@@ -2,7 +2,7 @@
 
 RU
 
-ДОБАВЛЕНА НОВАЯ БОЛЕЕ КОМПАКТНАЯ ВЕРСИЯ ПЛАТЫ С ИСПОЛЬЗОВАНИЕМ ДИОДА. ВСЁ НАХОДИТСЯ В ОДНОМ lay ФАЙЛЕ. НОВАЯ ВЕРСИЯ ПЛАТЫ ПОКА НЕ ТЕСТИРОВАЛОСЬ ПОЛНОСТЬЮ, МОГУТ БЫТЬ ПРОБЛЕМЫ. ДОБАВЛЕНА ПОДДЕРЖКА PSP GO, НО ПОКА ТОЖЕ НЕ ТЕСТИРОВАЛОСЬ НА ПРАВИЛЬНОСТЬ РАБОТЫ.
+ДОБАВЛЕНА НОВАЯ БОЛЕЕ КОМПАКТНАЯ ВЕРСИЯ ПЛАТЫ. ВСЁ НАХОДИТСЯ В ОДНОМ lay ФАЙЛЕ. НОВАЯ ВЕРСИЯ ПЛАТЫ ПОКА НЕ ТЕСТИРОВАЛОСЬ ПОЛНОСТЬЮ. ДОБАВЛЕНА ПОДДЕРЖКА PSP GO, НО ПОКА ТОЖЕ НЕ ТЕСТИРОВАЛОСЬ НА ПРАВИЛЬНОСТЬ РАБОТЫ.
 
 Эмулятор сервисной батареи пандоры, написаный под ардуино. В качестве контроллера подойдёт Атмега 168/328. 
 
@@ -38,7 +38,7 @@ RU
 
 EN
 
-A NEW, MORE COMPACT VERSION OF THE BOARD USING A DIODE ADDED. EVERYTHING IS IN ONE lay FILE. THE NEW VERSION OF THE BOARD HAS NOT BEEN COMPLETELY TESTED YET, THERE MAY BE PROBLEMS. PSP GO SUPPORT HAS BEEN ADDED, BUT IT HAS NOT BEEN TESTED FOR CORRECT WORK.
+A NEW MORE COMPACT VERSION OF THE BOARD ADDED. EVERYTHING IS IN ONE lay FILE. THE NEW VERSION OF THE BOARD HAS NOT BEEN COMPLETELY TESTED YET. PSP GO SUPPORT HAS BEEN ADDED, BUT IT HAS NOT BEEN TESTED FOR CORRECT WORK.
 
 Pandora service battery emulator written for Arduino. Atmega 168/328 is suitable as a controller.
 

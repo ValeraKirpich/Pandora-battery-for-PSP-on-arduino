@@ -1,14 +1,17 @@
 # psp-pandora-battery-for-arduino BaryonSweeper
 
+<img src="https://github.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/blob/main/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%BE%D0%B5.png" width="667" height="500">
+<img src="https://github.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/blob/main/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20psp%20go.jpg" width="500" height="667">
+
 RU
 
-ДОБАВЛЕНА НОВАЯ БОЛЕЕ КОМПАКТНАЯ ВЕРСИЯ ПЛАТЫ. ВСЁ НАХОДИТСЯ В ОДНОМ lay ФАЙЛЕ. НОВАЯ ВЕРСИЯ ПЛАТЫ ПОКА НЕ ТЕСТИРОВАЛОСЬ ПОЛНОСТЬЮ. ДОБАВЛЕНА ПОДДЕРЖКА PSP GO, НО ПОКА ТОЖЕ НЕ ТЕСТИРОВАЛОСЬ НА ПРАВИЛЬНОСТЬ РАБОТЫ.
+ДОБАВЛЕНА НОВАЯ БОЛЕЕ КОМПАКТНАЯ ВЕРСИЯ ПЛАТЫ. ВСЁ НАХОДИТСЯ В ОДНОМ lay ФАЙЛЕ. НОВАЯ ВЕРСИЯ ПЛАТЫ ПОКА НЕ ТЕСТИРОВАЛОСЬ ПОЛНОСТЬЮ. ДОБАВЛЕНА ПОДДЕРЖКА PSP GO.
 
 Эмулятор сервисной батареи пандоры, написаный под ардуино. В качестве контроллера подойдёт Атмега 168/328. 
 
 Левый переключатель отвечает за включение аккумулятор. Второй за переключение режима (обычный/сервисный). Кнопка нужна для перезагрузки микроконтроллера. При включении или перезагрузке на кнопку пандора проинформирует о типе выбранного режима в зависимости от положения переключателя. Если светодиод мигает с периодами раз в секунду, то включен сервисный режим, если горит не прерывно, то работает обычный режим. При низком уровне заряда светодиод начнёт быстро мигать.
 
-ПОДДЕРЖИВАЮТСЯ ВСЕ МОДЕЛИ 1000-3000 и STREET! Поддержка PSP go есть, но пока не тестировалась на реальном железе. 
+ПОДДЕРЖИВАЮТСЯ ВСЕ МОДЕЛИ 1000-3000, STREET и GO!. 
 
 Все ключи и прошивка были обновлены на основе этого проекта https://github.com/khubik2/pysweeper. Там же можно следить за обновлениями, которые будут появляться и в этом проекте.
 
@@ -38,13 +41,13 @@ RU
 
 EN
 
-A NEW MORE COMPACT VERSION OF THE BOARD ADDED. EVERYTHING IS IN ONE lay FILE. THE NEW VERSION OF THE BOARD HAS NOT BEEN COMPLETELY TESTED YET. PSP GO SUPPORT HAS BEEN ADDED, BUT IT HAS NOT BEEN TESTED FOR CORRECT WORK.
+A NEW MORE COMPACT VERSION OF THE BOARD ADDED. EVERYTHING IS IN ONE lay FILE. THE NEW VERSION OF THE BOARD HAS NOT BEEN COMPLETELY TESTED YET. PSP GO SUPPORT HAS BEEN ADDED.
 
 Pandora service battery emulator written for Arduino. Atmega 168/328 is suitable as a controller.
 
 The left switch is responsible for turning on the battery. The second is for switching mode (normal/service). The button is needed to reboot the microcontroller. When you turn on or reboot the button, Pandora will inform you about the type of mode selected depending on the position of the switch. If the LED flashes once per second, then the service mode is on; if it lights up continuously, then the normal mode is operating. When the battery level is low, the LED will flash quickly.
 
-ALL MODELS SUPPORTED 1000-3000 AND STREET! There is support for PSP go, but it has not yet been tested on real hardware.
+ALL MODELS SUPPORTED 1000-3000, STREET AND GO!
 
 All keys and firmware have been updated based on this project https://github.com/khubik2/pysweeper. There you can also follow the updates that will appear in this project.
 

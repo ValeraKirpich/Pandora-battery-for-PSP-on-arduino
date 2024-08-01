@@ -1,6 +1,7 @@
 # psp-pandora-battery-for-arduino BaryonSweeper
 <body>
   <p align="center">
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/main/IMG_2024-08-01-13-09-17-202.jpg" width=30% height=auto>
     <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/main/IMG_2024-08-01-13-10-03-141.jpg" width=30% height=auto>
   </p>
  </body>

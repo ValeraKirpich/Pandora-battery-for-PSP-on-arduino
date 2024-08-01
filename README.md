@@ -1,7 +1,10 @@
 # psp-pandora-battery-for-arduino BaryonSweeper
-
-<img src="https://github.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/blob/main/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%BE%D0%B5.png" width="667" height="500">
-<img src="https://github.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/blob/main/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20psp%20go.jpg" width="500" height="667">
+<body>
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/main/IMG_2024-08-01-13-09-17-202.jpg" width=30% height=auto>
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/main/IMG_2024-08-01-13-10-03-141.jpg" width=30% height=auto>
+  </p>
+ </body>
 
 RU
 

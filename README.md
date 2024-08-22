@@ -23,7 +23,7 @@
 <p>Универсальную прошивку для всех PSP можете скачать тут <a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 DC-ARK</a></p>
 <h3>Решение проблем:</h3>
 <ol>
-<li>Не срабатывает обмен (не мигают светодиды) при подключении к PSP<br /><br /><strong>Решение</strong>: возможно у вас недостаточное падение напряжения на микросхеме cd4011/74hc00. Попробуйте увеличить номинал резистора R9 (который стоит под микросхемой) с 200 ом до 330-470 ом (подбирается методом пробы).</li>
+<li>Не срабатывает обмен (не мигают светодиды) при подключении к PSP<br /><strong>Решение</strong>: возможно у вас недостаточное падение напряжения на микросхеме cd4011/74hc00. Попробуйте увеличить номинал резистора R9 (который стоит под микросхемой) с 200 ом до 330-470 ом (подбирается методом пробы).</li>
 </ol>
 <p><strong>Источник</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>
 
@@ -46,7 +46,7 @@
 <p>You can download the universal firmware for all PSPs here <a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 DC-ARK</a></p>
 <h3>Troubleshooting:</h3>
 <ol>
-<li>Exchange does not work (LEDs do not blink) when connected to PSP<br /><br /><strong>Solution</strong>: you may have insufficient voltage drop on the cd4011/74hc00 chip. Try increasing the value of resistor R9 (which is located under the microcircuit) from 200 ohms to 330-470 ohms (selected by trial and error).</li>
+<li>Exchange does not work (LEDs do not blink) when connected to PSP<br /><strong>Solution</strong>: you may have insufficient voltage drop on the cd4011/74hc00 chip. Try increasing the value of resistor R9 (which is located under the microcircuit) from 200 ohms to 330-470 ohms (selected by trial and error).</li>
 </ol>
 <p><strong>Source</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>
 

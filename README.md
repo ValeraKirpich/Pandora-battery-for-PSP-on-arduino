@@ -47,6 +47,8 @@ PSP STREET: подключите кабель в приставку, зажми�
 <strong>Решение</strong>: возможно у вас недостаточное падение напряжения на микросхеме cd4011/74hc00. Попробуйте увеличить номинал резистора R9 (который стоит под микросхемой) с 470 ом до 610-1000 ом (подбирается методом пробы).</li>
 <li>На приставке мигает светодиод чтения данных, прошивка не заводится<br />
 <strong>Решение</strong>: возможо у вас медленная флешка. Пробуйте повторить запуск, с какой то попытки прошивка заведётся. Либо используйте другую более быструю карту памяти.</li>
+<li>При подключении к приставке помигали светодиоды на аккумуляторе, но ничего не происходит<br />
+<strong>Решение</strong>: приставка не может считать прошивку с флешки. Скорее всего вы неправльно подготовили карту памяти с прошивкой, сделайте это повторно. Если и дальше ничего не происходит, попробуйте другую флешку. </li>
 </ol>
 
 <p><strong>Источник</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>
@@ -91,6 +93,7 @@ This device is charged on models 1000-3000. To do this, you need to turn on the 
 <strong>Solution</strong>: you may have insufficient voltage drop on the cd4011/74hc00 chip. Try increasing the value of the resistor R9 (which is located under the chip) from 470 ohms to 610-1000 ohms (selected by trial and error).</li>
 <li>The data reading LED on the console blinks, the firmware does not start<br />
 <strong>Solution</strong>: you may have a slow flash drive. Try to restart the firmware, it will start after some attempt. Or use another faster memory card.</li>
+<strong>Solution</strong>: the console cannot read the firmware from the flash drive. Most likely, you incorrectly prepared the memory card with the firmware, do it again. If nothing happens, try another flash drive.</li>
 </ol>
 
 <p><strong>Source</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>

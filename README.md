@@ -39,6 +39,7 @@ PSP 1000-3000: вставьте в приставку вместо аккуму�
 PSP GO: подключите кабель в приставку, прошивка заведётся автоматически (сама приставка должна быть заряжена)<br />
 PSP STREET: подключите кабель в приставку, зажмите комбинацию клавиш "Влево", "круг", "левый триггер", "правый триггер", затем, не отпуская кнопки, нажмите включение, прошивка с флешки заведётся (сама приставка должна быть заряжена)<br /><br /></li>
 </ol>
+Прошивка иногда может загрузиться не сразу, а через несколько секунд. Просто подождите.<br />
 Зарядка данного устройства производится на моделях 1000-3000. Для этого необходимо включить аккумулятор в любой из режимов, затем вставить в консоль и подключить зарядку, при этом саму PSP включать не нужно.<br /></p>
   
 <h3>Решение проблем:</h3>
@@ -85,6 +86,7 @@ PSP 1000-3000: insert into the console instead of the battery, the firmware from
 PSP GO: connect the cable to the console, the firmware will start automatically (the console itself must be charged)<br />
 PSP STREET: connect the cable to the console, hold down the key combination "Left", "circle", "left trigger", "right trigger", then, without releasing the button, press the power button, the firmware from the flash drive will start (the console itself must be charged)<br /><br /></li>
 </ol>
+The firmware may sometimes not load immediately, but after a few seconds. Just wait.<br />
 This device is charged on models 1000-3000. To do this, you need to turn on the battery in any of the modes, then insert it into the console and connect the charger, while the PSP itself does not need to be turned on.<br /></p>
 
 <h3>Troubleshooting:</h3>

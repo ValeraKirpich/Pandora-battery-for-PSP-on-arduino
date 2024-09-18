@@ -49,21 +49,25 @@ PSP STREET: подключите кабель в приставку, зажми�
 <li>На приставке мигает светодиод чтения данных, прошивка не заводится<br />
 <strong>Решение</strong>: возможо у вас медленная флешка. Пробуйте повторить запуск, с какой то попытки прошивка заведётся. Либо используйте другую более быструю карту памяти.</li>
 <li>При подключении к приставке помигали светодиоды на аккумуляторе, но ничего не происходит<br />
-<strong>Решение</strong>: приставка не может считать прошивку с флешки. Скорее всего вы неправльно подготовили карту памяти с прошивкой, сделайте это повторно. Если и дальше ничего не происходит, попробуйте другую флешку. </li>
+<strong>Решение</strong>: тут может два варианта решения<br />
+А) приставка не может считать прошивку с флешки. Скорее всего вы неправльно подготовили карту памяти с прошивкой, сделайте это повторно. Если и дальше ничего не происходит, попробуйте другую флешку.<br />
+Б) Не хватает питания, попробуйте сперва подключить зарядку, а потом вставить аккумулятор. Такое явление было замеченно на 1000 fat моделях</li>
 </ol>
 
 <p><strong>Источник</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>
 
 <h3><strong>EN</strong></h3>
+
 <h3><strong>Description</strong></h3>
 <p>Pandora service battery emulator for brick recovery and PSP firmware. The project is based on Arduino. Atmega 168/328 is suitable as a controller.</p>
-<p><span style="color: #00bc03;">ALL MODELS 1000-3000, STREET and GO ARE SUPPORTED!</span></p>
+<p><span style="color: #00bc03;">ALL 1000-3000, STREET and GO MODELS ARE SUPPORTED!</span></p>
 <p>The left switch is responsible for turning on the battery. The second one is for switching the mode (normal/service). The button is needed to reboot the microcontroller. When turning on or rebooting with the button, Pandora will inform you about the type of the selected mode depending on the switch position. If the LED blinks with periods of once per second, then the service mode is on, if it lights up continuously, then the normal mode is working. When the battery level is low, the LED will start blinking quickly.</p>
 <p>All keys and firmware have been updated based on this project <a href="https://github.com/khubik2/pysweeper" target="_blank" rel="noopener" title="pysweeper">pysweeper</a>. There you can also follow the updates that will appear in this project.</p>
+
 <h3>Microcontroller firmware</h3>
 <p>To program the microcontroller you need:</p>
 <ol>
-<li>Download the programming environment <a href="https://www.arduino.cc/" target="_blank" rel="noopener" title="arduino">Arduino</a></li>
+<li>Download the <a href="https://www.arduino.cc/" target="_blank" rel="noopener" title="arduino">Arduino programming environment</a></li>
 <li>Install the libraries <a href="https://github.com/ljbeng/SoftwareSerialParity" target="_blank" rel="noopener" title="SoftwareSerialParity">SoftwareSerialParity</a> and <a href="https://www.arduino.cc/reference/en/libraries/aeslib/" target="_blank" rel="noopener" title="AES">AES</a></li>
 <li>If you are working with a clean microcontroller, you must first flash the bootloader from Arduino Uno into it</li>
 <li>Then you can flash and update the firmware using a sketch via any USB to TTL converter, connecting it to the pins (rx, tx, rst, gnd) on the board, or insert the microcontroller into a ready-made Arduino Uno board for flashing. You can also use the usb asp programmer.</li>
@@ -71,31 +75,34 @@ PSP STREET: подключите кабель в приставку, зажми�
 <h3>Firmware for PSP</h3>
 <p>You can download the universal firmware for all PSPs here <a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 DC-ARK</a></p>
 
-<h3><strong>Interchangeability of microcircuits</strong></h3> 
-<p>Atmega 328 or 168<br /> 
-cd4011 -> k561la7<br /> 
+<h3><strong>Interchangeability of chips</strong></h3>
+<p>Atmega 328 or 168<br />
+cd4011 -> k561la7<br />
 74hc00 -> kr1554la3<br /></p>
 
 <h3><strong>Usage</strong></h3>
 <ol>
-<li>Insert the flash drive with the prepared firmware into the console</li>
+<li>Insert the flash drive with the prepared firmware</li>
 <li>Turn on the battery in service mode (the LED should blink slowly)</li>
 <li>Turn off the console completely if it was turned on earlier or is in sleep mode</li>
 <li>Then proceed according to your model<br />
-PSP 1000-3000: insert into the console instead of the battery, the firmware from the flash drive will start automatically<br />
+PSP 1000-3000: insert it into the console instead of the battery, the firmware from the flash drive will start automatically<br />
 PSP GO: connect the cable to the console, the firmware will start automatically (the console itself must be charged)<br />
-PSP STREET: connect the cable to the console, hold down the key combination "Left", "circle", "left trigger", "right trigger", then, without releasing the button, press the power button, the firmware from the flash drive will start (the console itself must be charged)<br /><br /></li>
+PSP STREET: connect the cable to the console, hold down the key combination "Left", "circle", "left trigger", "right trigger", then, without releasing the buttons, press the power button, the firmware from the flash drive will start (the console itself must be charged)<br /><br /></li>
 </ol>
 The firmware may sometimes not load immediately, but after a few seconds. Just wait.<br />
-This device is charged on models 1000-3000. To do this, you need to turn on the battery in any of the modes, then insert it into the console and connect the charger, while the PSP itself does not need to be turned on.<br /></p>
+This device is charged on models 1000-3000. To do this, turn on the battery in any of the modes, then insert it into the console and connect the charger, while the PSP itself does not need to be turned on.<br /></p>
 
 <h3>Troubleshooting:</h3>
 <ol>
-<li>The exchange does not work (LEDs do not blink) when connected to the PSP, everything is assembled correctly, there are no short circuits<br />
-<strong>Solution</strong>: you may have insufficient voltage drop on the cd4011/74hc00 chip. Try increasing the value of the resistor R9 (which is located under the chip) from 470 ohms to 610-1000 ohms (selected by trial and error).</li>
+<li>The exchange does not work (the LEDs do not blink) when connected to the PSP, everything is assembled correctly, there are no short circuits<br />
+<strong>Solution</strong>: perhaps you have insufficient voltage drop on the cd4011/74hc00 microcircuit. Try increasing the value of the resistor R9 (which is located under the microcircuit) from 470 ohms to 610-1000 ohms (selected by trial).</li>
 <li>The data reading LED on the console blinks, the firmware does not start<br />
-<strong>Solution</strong>: you may have a slow flash drive. Try to restart the firmware, it will start after some attempt. Or use another faster memory card.</li>
-<strong>Solution</strong>: the console cannot read the firmware from the flash drive. Most likely, you incorrectly prepared the memory card with the firmware, do it again. If nothing happens, try another flash drive.</li>
+<strong>Solution</strong>: perhaps you have a slow flash drive. Try to restart, the firmware will start after some attempt. Or use another faster memory card.</li>
+<li>When connected to the console, the LEDs on the battery blinked, but nothing happens<br />
+<strong>Solution</strong>: there may be two possible solutions<br />
+A) the console cannot read the firmware from the flash drive. Most likely, you incorrectly prepared the memory card with the firmware, do it again. If nothing happens, try another flash drive.<br />
+B) There is not enough power, try connecting the charger first, and then insert the battery. This phenomenon was noticed on 1000 fat models</li>
 </ol>
 
 <p><strong>Source</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>

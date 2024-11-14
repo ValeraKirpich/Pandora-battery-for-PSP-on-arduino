@@ -21,8 +21,12 @@
 <li>Если вы работаете с чистым микроконтроллером, то предварительно в него нужно зашить bootloader от Arduino uno</li>
 <li>Далее прошивать и обновлять прошивку можно скетчем через любой usb to ttl преобразователь, соединив с пинами (rx, tx, rst, gnd) на плате, либо вставить микроконтроллер в готовую плату arduino uno для прошивки. Так же можно использовать программатор usb asp.</li>
 </ol>
+
 <h3>Прошивка для PSP</h3>
-<p>Универсальную прошивку для всех PSP можете скачать тут <a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 DC-ARK</a></p>
+<p>
+<a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 DC-ARK (не всегда грузится с первого раза)</a><br />
+<a href="https://www.pspx.ru/forum/showthread.php?t=114382" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 aesright (всегда грузится нормально, рекомендуется)</a>
+</p>
 
 <h3><strong>Взаимозаменяемость микросхем</strong></h3>
 <p>Atmega 328 или 168<br />
@@ -72,8 +76,12 @@ PSP STREET: подключите кабель в приставку, зажми�
 <li>If you are working with a clean microcontroller, you must first flash the bootloader from Arduino Uno into it</li>
 <li>Then you can flash and update the firmware using a sketch via any USB to TTL converter, connecting it to the pins (rx, tx, rst, gnd) on the board, or insert the microcontroller into a ready-made Arduino Uno board for flashing. You can also use the usb asp programmer.</li>
 </ol>
-<h3>Firmware for PSP</h3>
-<p>You can download the universal firmware for all PSPs here <a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 DC-ARK</a></p>
+
+<h3>Firmware for PSP</h3> 
+<p>
+<a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC -ARK">6.61 DC-ARK (doesn't always load the first time)</a><br /> 
+<a href="https://www.pspx.ru/forum/showthread.php?t=114382" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 aesright (always loads normally, recommended)</a> 
+</p>
 
 <h3><strong>Interchangeability of chips</strong></h3>
 <p>Atmega 328 or 168<br />

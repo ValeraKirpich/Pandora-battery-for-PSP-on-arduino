@@ -49,13 +49,15 @@ PSP STREET: подключите кабель в приставку, зажми�
 <h3>Решение проблем:</h3>
 <ol>
 <li>Не срабатывает обмен (не мигают светодиды) при подключении к PSP, всё собрано правильно, замыканий нет<br />
-<strong>Решение</strong>: возможно у вас недостаточное падение напряжения на микросхеме cd4011/74hc00. Попробуйте увеличить номинал резистора R9 (который стоит под микросхемой) с 470 ом до 610-1000 ом (подбирается методом пробы).</li>
+<strong>Решение</strong>: возможно у вас недостаточное или большое падение напряжения на микросхеме cd4011/74hc00. Попробуйте вместо R9 (который стоит под микросхемой на большой плате) разные резисторы в диапозоне с 200ом до 1000ом. Подбирается методом пробы. К примеру, у меня на smd плате зраработало с резистором 220ом, на большой плате 470ом, на другой большой плате с другой аналогичной микросхемой подошёл 680ом.</li>
 <li>На приставке мигает светодиод чтения данных, прошивка не заводится<br />
 <strong>Решение</strong>: возможо у вас медленная флешка. Пробуйте повторить запуск, с какой то попытки прошивка заведётся. Либо используйте другую более быструю карту памяти.</li>
 <li>При подключении к приставке помигали светодиоды на аккумуляторе, но ничего не происходит<br />
 <strong>Решение</strong>: тут может два варианта решения<br />
 А) приставка не может считать прошивку с флешки. Скорее всего вы неправльно подготовили карту памяти с прошивкой, сделайте это повторно. Если и дальше ничего не происходит, попробуйте другую флешку.<br />
 Б) Не хватает питания, попробуйте сперва подключить зарядку, а потом вставить аккумулятор. Такое явление было замеченно на 1000 fat моделях</li>
+<li>Не верно определяется заряд аккумулятора<br />
+<strong>Решение</strong>: в новой версии v4 был изменнён номинал резистора с 22к на 30к. Возможно, вы этого не заметили.</li>
 </ol>
 
 <p><strong>Источник</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>
@@ -104,13 +106,15 @@ This device is charged on models 1000-3000. To do this, turn on the battery in a
 <h3>Troubleshooting:</h3>
 <ol>
 <li>The exchange does not work (the LEDs do not blink) when connected to the PSP, everything is assembled correctly, there are no short circuits<br />
-<strong>Solution</strong>: perhaps you have insufficient voltage drop on the cd4011/74hc00 microcircuit. Try increasing the value of the resistor R9 (which is located under the microcircuit) from 470 ohms to 610-1000 ohms (selected by trial).</li>
+<strong>Solution</strong>: You may have insufficient or excessive voltage drop on the CD4011/74HC00 chip. Try different resistors ranging from 200ohms to1000 ohms instead of R9 (which is located under the chip on the larger board). The correct value is determined by trial and error. For example, a 220ohm resistor worked for me on an SMD board, a 470ohm resistor on a larger board, and a 680ohm resistor worked on another larger board with a different, similar chip.</li>
 <li>The data reading LED on the console blinks, the firmware does not start<br />
 <strong>Solution</strong>: perhaps you have a slow flash drive. Try to restart, the firmware will start after some attempt. Or use another faster memory card.</li>
 <li>When connected to the console, the LEDs on the battery blinked, but nothing happens<br />
 <strong>Solution</strong>: there may be two possible solutions<br />
 A) the console cannot read the firmware from the flash drive. Most likely, you incorrectly prepared the memory card with the firmware, do it again. If nothing happens, try another flash drive.<br />
 B) There is not enough power, try connecting the charger first, and then insert the battery. This phenomenon was noticed on 1000 fat models</li>
+<li>Battery charge is not being detected correctly<br />
+<strong>Solution</strong>: In the new v4 version, the resistor value was changed from 22k to 30k. You may not have noticed this.</li>
 </ol>
 
 <p><strong>Source</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>

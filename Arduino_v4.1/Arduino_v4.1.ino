@@ -15,7 +15,7 @@ SoftwareSerialParity pspSerial(2, 3); // RX, TX
 #define pin_power A1
 #define max_ref_volt 976 // Adjustment, since in fact 4.2 V from the battery will be equal to 1.05 V on the divider
 #define max_voltage_battery 4200 // mv battery 
-#define min_volt 3150 // min mv alarm debug led
+#define min_volt 3300 // min mv alarm debug led
 #define max_charge_value 1622 // ? maximum charge percentage value
 
 byte serial_code[8] = {0};

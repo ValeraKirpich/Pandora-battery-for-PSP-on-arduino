@@ -2,9 +2,9 @@
 <body>
   <p align="center">
     <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/photo%20examples/1.jpg" width=30% height=auto>
-    <img src="https://github.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/blob/main/photo%20examples/2.jpg" width=30% height=auto>
-    <img src="https://github.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/blob/main/photo%20examples/3.jpg?raw=true" width=30% height=auto>
-    <img src="https://github.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/blob/main/photo%20examples/4.jpg?raw=true" width=30% height=auto>
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/photo%20examples/2.jpg" width=30% height=auto>
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/photo%20examples/3.jpg" width=30% height=auto>
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/photo%20examples/4.jpg" width=30% height=auto>
   </p>
 
 <h3><strong>RU</strong></h3>

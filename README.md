@@ -20,7 +20,7 @@
 <ol>
 <li>Скачать среду программирования <a href="https://www.arduino.cc/" target="_blank" rel="noopener" title="arduino">Arduino</a></li>
 <li>Устаноить библиотеки <a href="https://github.com/ljbeng/SoftwareSerialParity" target="_blank" rel="noopener" title="SoftwareSerialParity">SoftwareSerialParity</a> и <a href="https://www.arduino.cc/reference/en/libraries/aeslib/" target="_blank" rel="noopener" title="AES">AES</a></li>
-<li>Если вы работаете с чистым микроконтроллером, то предварительно в него нужно зашить bootloader от Arduino uno</li>
+<li>Микроконтроллер должен быть предварительно прошит как Arduino nano</li>
 <li>Далее прошивать и обновлять прошивку можно скетчем через любой usb to ttl преобразователь, соединив с пинами (rx, tx, rst, gnd) на плате, либо вставить микроконтроллер в готовую плату arduino uno для прошивки. Так же можно использовать программатор usb asp.</li>
 </ol>
 
@@ -77,7 +77,7 @@ PSP STREET: подключите кабель в приставку, зажми�
 <ol>
 <li>Download the <a href="https://www.arduino.cc/" target="_blank" rel="noopener" title="arduino">Arduino programming environment</a></li>
 <li>Install the libraries <a href="https://github.com/ljbeng/SoftwareSerialParity" target="_blank" rel="noopener" title="SoftwareSerialParity">SoftwareSerialParity</a> and <a href="https://www.arduino.cc/reference/en/libraries/aeslib/" target="_blank" rel="noopener" title="AES">AES</a></li>
-<li>If you are working with a clean microcontroller, you must first flash the bootloader from Arduino Uno into it</li>
+<li>The microcontroller must be pre-flashed like the Ardino Nano</li>
 <li>Then you can flash and update the firmware using a sketch via any USB to TTL converter, connecting it to the pins (rx, tx, rst, gnd) on the board, or insert the microcontroller into a ready-made Arduino Uno board for flashing. You can also use the usb asp programmer.</li>
 </ol>
 

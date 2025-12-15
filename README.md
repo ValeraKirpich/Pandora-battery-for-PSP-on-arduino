@@ -29,7 +29,7 @@
 </ol>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino.png" width=30% height=auto>
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino%20328.png" width=30% height=auto>
   </p>
 
 <h3>Прошивка для PSP</h3>
@@ -93,7 +93,7 @@ PSP STREET: подключите кабель в приставку, зажми�
 </ol>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino.png" width=30% height=auto>
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino%20328.png" width=30% height=auto>
   </p>
 
 <h3>Firmware for PSP</h3> 

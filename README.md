@@ -10,19 +10,27 @@
 <h3><strong>RU</strong></h3>
 
 <h3><strong>Описание</strong></h3>
-<p>Эмулятор сервисной батареи пандоры для восстановления из кирпича и прошивки PSP. Проект разработан на базе Ардуино. В качестве контроллера подойдёт Атмега 168/328.</p>
+<p>Эмулятор сервисной батареи пандоры для восстановления из кирпича и прошивки PSP. Проект разработан на базе Ардуино. В качестве контроллера подойдёт любая Атмега 328.</p>
 <p><span style="color: #00bc03;">ПОДДЕРЖИВАЮТСЯ ВСЕ МОДЕЛИ 1000-3000, STREET и GO!</span></p>
 <p>Левый переключатель отвечает за включение аккумулятор. Второй за переключение режима (обычный/сервисный). Кнопка нужна для перезагрузки микроконтроллера. При включении или перезагрузке на кнопку пандора проинформирует о типе выбранного режима в зависимости от положения переключателя. Если светодиод мигает с периодами раз в секунду, то включен сервисный режим, если горит не прерывно, то работает обычный режим. При низком уровне заряда светодиод начнёт быстро мигать.</p>
 <p>Все ключи и прошивка были обновлены на основе этого проекта <a href="https://github.com/khubik2/pysweeper" target="_blank" rel="noopener" title="pysweeper">pysweeper</a>. Там же можно следить за обновлениями, которые будут появляться и в этом проекте.</p>
+
+<h3><strong>Сборка</strong></h3>
+<p>Можете выбрать люой понравившийся вариант платы. Срузу скажу, что установка кварца не обязательна, так как микроконтроллер может работать от внутреннего генератора. Для этого просто можете не ставить детали, помеченные на схеме звёздочкой.</p>
 
 <h3>Прошивка микроконтроллера</h3>
 <p>Для программирования микроконтроллера необходимо:</p>
 <ol>
 <li>Скачать среду программирования <a href="https://www.arduino.cc/" target="_blank" rel="noopener" title="arduino">Arduino</a></li>
+<li>Устаноить дополнение для менеджера плат <a href="https://github.com/MCUdude/MiniCore" target="_blank" rel="noopener" title="MiniCore">MiniCore</a></li>
 <li>Устаноить библиотеки <a href="https://github.com/ljbeng/SoftwareSerialParity" target="_blank" rel="noopener" title="SoftwareSerialParity">SoftwareSerialParity</a> и <a href="https://www.arduino.cc/reference/en/libraries/aeslib/" target="_blank" rel="noopener" title="AES">AES</a></li>
-<li>Микроконтроллер должен быть предварительно прошит как Arduino nano (даже dip версия)</li>
+<li>Микроконтроллер должен быть предварительно прошит через программатор как Atmega 328. В настройках вам стоит выбрать частоту работы 8 мгц от внешнего генератор (если вы хотите впаять кварц), либо от внутреннего (если вы отказываетесь от его установки).</li>
 <li>Далее прошивать и обновлять прошивку можно скетчем через любой usb to ttl преобразователь, соединив с пинами (rx, tx, rst, gnd) на плате, либо вставить микроконтроллер в готовую плату arduino uno для прошивки. Так же можно использовать программатор usb asp.</li>
 </ol>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino.png" width=30% height=auto>
+  </p>
 
 <h3>Прошивка для PSP</h3>
 <p>
@@ -31,8 +39,7 @@
 </p>
 
 <h3><strong>Взаимозаменяемость микросхем</strong></h3>
-<p>Atmega 328 или 168<br />
-cd4011 -> к561ла7<br />
+<p>cd4011 -> к561ла7<br />
 74hc00 -> кр1554ла3<br /></p>
 
 <h3><strong>Использование</strong></h3>
@@ -67,19 +74,27 @@ PSP STREET: подключите кабель в приставку, зажми�
 <h3><strong>EN</strong></h3>
 
 <h3><strong>Description</strong></h3>
-<p>Pandora service battery emulator for brick recovery and PSP firmware. The project is based on Arduino. Atmega 168/328 is suitable as a controller.</p>
+<p>Pandora service battery emulator for brick recovery and PSP firmware. The project is based on Arduino. Any Atmega 328 will do as a controller.</p>
 <p><span style="color: #00bc03;">ALL 1000-3000, STREET and GO MODELS ARE SUPPORTED!</span></p>
 <p>The left switch is responsible for turning on the battery. The second one is for switching the mode (normal/service). The button is needed to reboot the microcontroller. When turning on or rebooting with the button, Pandora will inform you about the type of the selected mode depending on the switch position. If the LED blinks with periods of once per second, then the service mode is on, if it lights up continuously, then the normal mode is working. When the battery level is low, the LED will start blinking quickly.</p>
 <p>All keys and firmware have been updated based on this project <a href="https://github.com/khubik2/pysweeper" target="_blank" rel="noopener" title="pysweeper">pysweeper</a>. There you can also follow the updates that will appear in this project.</p>
+
+<h3><strong>Assembly</strong></h3>
+<p>You can choose any board design you like. I'll say right away that installing a quartz crystal is not necessary, as the microcontroller can be powered by its internal oscillator. To do this, simply omit the parts marked with an asterisk on the schematic.</p>
 
 <h3>Microcontroller firmware</h3>
 <p>To program the microcontroller you need:</p>
 <ol>
 <li>Download the <a href="https://www.arduino.cc/" target="_blank" rel="noopener" title="arduino">Arduino programming environment</a></li>
+<li>Install the add-on for the board manager <a href="https://github.com/MCUdude/MiniCore" target="_blank" rel="noopener" title="MiniCore">MiniCore</a></li>
 <li>Install the libraries <a href="https://github.com/ljbeng/SoftwareSerialParity" target="_blank" rel="noopener" title="SoftwareSerialParity">SoftwareSerialParity</a> and <a href="https://www.arduino.cc/reference/en/libraries/aeslib/" target="_blank" rel="noopener" title="AES">AES</a></li>
-<li>The microcontroller must be pre-flashed like the Ardino Nano (even the dip version)</li>
+<li>The microcontroller must be pre-programmed as an Atmega 328 using a programmer. In the settings, you should select an operating frequency of 8 MHz from an external oscillator (if you want to solder in a quartz crystal) or from an internal one (if you refuse to install one).</li>
 <li>Then you can flash and update the firmware using a sketch via any USB to TTL converter, connecting it to the pins (rx, tx, rst, gnd) on the board, or insert the microcontroller into a ready-made Arduino Uno board for flashing. You can also use the usb asp programmer.</li>
 </ol>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino.png" width=30% height=auto>
+  </p>
 
 <h3>Firmware for PSP</h3> 
 <p>
@@ -88,8 +103,7 @@ PSP STREET: подключите кабель в приставку, зажми�
 </p>
 
 <h3><strong>Interchangeability of chips</strong></h3>
-<p>Atmega 328 or 168<br />
-cd4011 -> k561la7<br />
+<p>cd4011 -> k561la7<br />
 74hc00 -> kr1554la3<br /></p>
 
 <h3><strong>Usage</strong></h3>

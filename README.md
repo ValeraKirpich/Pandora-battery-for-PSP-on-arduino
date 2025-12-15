@@ -32,6 +32,10 @@
     <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino%20328.png" width=30% height=auto>
   </p>
 
+<p>
+Почему не используется кварц по умолчанию на 16 мгц? Всё просто. На пониженной частототе микроконтроллер может работать от меньшего питания более стабильно, так же он потребляет меньше энергии, что хорошо скажется на экономии заряда аккумулятора.
+</p>
+
 <h3>Прошивка для PSP</h3>
 <p>
 <a href="https://www.pspx.ru/forum/showthread.php?t=114800" target="_blank" rel="noopener" title="6.61 DC-ARK">6.61 DC-ARK (не всегда грузится с первого раза)</a><br />
@@ -95,6 +99,10 @@ PSP STREET: подключите кабель в приставку, зажми�
 <p align="center">
     <img src="https://raw.githubusercontent.com/ValeraKirpich/Pandora-battery-for-PSP-on-arduino/refs/heads/main/setting%20arduino%20328.png" width=30% height=auto>
   </p>
+
+<p>
+Why isn't the default 16 MHz crystal used? It's simple. At a lower frequency, the microcontroller can operate more reliably from a lower power supply, and it also consumes less power, which will have a positive impact on battery life.
+</p>
 
 <h3>Firmware for PSP</h3> 
 <p>

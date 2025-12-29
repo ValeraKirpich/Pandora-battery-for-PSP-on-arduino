@@ -67,8 +67,8 @@ PSP STREET: подключите кабель в приставку, зажми�
 <strong>Решение</strong>: возможо у вас медленная флешка. Пробуйте повторить запуск, с какой то попытки прошивка заведётся. Либо используйте другую более быструю карту памяти.</li>
 <li>При подключении к приставке помигали светодиоды на аккумуляторе, но ничего не происходит<br />
 <strong>Решение</strong>: тут может три варианта решения<br />
-А) Приставка не может считать прошивку с флешки. Скорее всего вы неправльно подготовили карту памяти с прошивкой, сделайте это повторно. Если и дальше ничего не происходит, попробуйте другую флешку.<br />
-Б) Попробуйте вставить выключенный аккумулятор в приставку, а только потом включить его (было замечено такое решение на одном экземпляре, предположительно проблема в слабой банке аккумуляторе)
+А) Приставка не может считать прошивку с флешки. Скорее всего вы неправльно подготовили карту памяти с прошивкой, сделайте это повторно. Если и дальше ничего не происходит, попробуйте другую флешку<br />
+Б) Попробуйте вставить выключенный аккумулятор в приставку, а только потом включить его (было замечено такое решение на одном экземпляре, предположительно проблема в слабой банке аккумуляторе)<br />
 В) Не хватает питания, попробуйте сперва подключить зарядку, а потом вставить аккумулятор. Такое явление было замеченно на 1000 fat моделях</li>
 <li>Не верно определяется заряд аккумулятора<br />
 <strong>Решение</strong>: в новой версии v4 был изменнён номинал резистора с 22к на 30к. Возможно, вы этого не заметили.</li>
@@ -136,8 +136,8 @@ This device is charged on models 1000-3000. To do this, turn on the battery in a
 <strong>Solution</strong>: You may have a slow flash drive. Try restarting the device; the firmware will load after a few tries. Or use a different, faster memory card.</li>
 <li>When connecting to the device, the LEDs on the battery blinked, but nothing happened.<br />
 <strong>Solution</strong>: There are three possible solutions.<br />
-A) The device can't read the firmware from the flash drive. You most likely prepared the memory card with the firmware incorrectly; try again. If nothing happens, try a different flash drive.<br />
-B) Try inserting the battery into the device while it's turned off, and only then turning it on. (This issue has only been observed on one device, presumably due to a weak battery cell.)
+A) The device can't read the firmware from the flash drive. You most likely prepared the memory card with the firmware incorrectly; try again. If nothing happens, try a different flash drive<br />
+B) Try inserting the battery into the device while it's turned off, and only then turning it on. (This issue has only been observed on one device, presumably due to a weak battery cell.)<br />
 C) There's not enough power. Try connecting the charger first, then inserting the battery. This phenomenon was observed on 1000 fat models.</li>
 <li>Battery charge is not detected correctly.<br />
 <strong>Solution: In the new v4 version, the resistor value was changed from 22k to 30k. You may not have noticed this.</li>

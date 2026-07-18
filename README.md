@@ -145,4 +145,8 @@ C) There's not enough power. Try connecting the charger first, then inserting th
 
 <p><strong>Source</strong> https://www.pspx.ru/forum/showpost.php?p=1229948</p>
 
+## 🌟 Special Thanks
+
+@st1x51, @dee98, @R&D, @DenielX и всю команду **альянс СНГ разработчиков PSP**, а так же участников форума **pspx.ru**
+
  </body>

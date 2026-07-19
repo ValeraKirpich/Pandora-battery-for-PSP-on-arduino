@@ -147,6 +147,6 @@ C) There's not enough power. Try connecting the charger first, then inserting th
 
 ## 🌟 Special Thanks
 
-@st1x51, @dee98, @R&D, @DenielX и всю команду **альянс СНГ разработчиков PSP**, а так же участников форума **pspx.ru**
+[@st1x51](https://github.com/st1x51), @dee98, [@DenielX](https://github.com/DenielX) и всю команду **альянс СНГ разработчиков PSP**, а так же участников форума **pspx.ru**
 
  </body>
